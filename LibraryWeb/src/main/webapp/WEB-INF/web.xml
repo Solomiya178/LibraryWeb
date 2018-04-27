@@ -1,0 +1,31 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Library Web Application</display-name>
+    <context-param>
+        <param-name>jdbcURL</param-name>
+        <param-value>jdbc:postgresql://127.0.0.1:5432/library</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcUsername</param-name>
+        <param-value>postgres</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcPassword</param-name>
+        <param-value>admin</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>com.hryshko.controller.Controller</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+</web-app>

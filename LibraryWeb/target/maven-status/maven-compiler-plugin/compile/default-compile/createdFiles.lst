@@ -1,0 +1,3 @@
+com\hryshko\model\Book.class
+com\hryshko\controller\Controller.class
+com\hryshko\dao\BookDao.class
